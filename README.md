@@ -27,3 +27,14 @@ Assignment 1 solution is given in two ways. One,in a notebook explaning in depth
 - cd into CSV_file_processing directory from root directory. for example: `cd CSV_file_processing`
 - In the command-prompt type `jupyter-notebook` and a browser will pop up. 
 - from the browser select the file named csv_processing_notebook.ipynb and start running the code inside
+
+## Steps to run assignment 2:
+A django microservice. The steps are:
+- make sure virtual environment is active (instructions given in Project setup) 
+- cd into the folder django_microservice
+- run into the command prompt `python manage.py makemigrations && python manage.py migrate`
+- create a superuser using command `python manage.py createsuperuser`
+- Run `python manage.py runserver`. default port is 8000.
+- go to admin panel by entering url `http://127.0.0.1:8000/admin` in a browser and log in using superuser credentials.
+- add category and games from admin panel.
+- to see the list of games go to url: `http://127.0.0.1:8000/api/v1/games`. a query parameter can also be given named category_id. for example `http://127.0.0.1:8000/api/v1/games/?category_id=1`
